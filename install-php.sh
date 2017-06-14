@@ -40,6 +40,8 @@ docker-php-ext-install \
     pdo_mysql \
     pdo_pgsql \
     xmlrpc \
+    soap \
+    xdebug \
     zip
 
 # Download trusted certs 
