@@ -7,6 +7,7 @@ RUN apt-get install -yqq git libmcrypt-dev libpq-dev libcurl4-gnutls-dev libicu-
 # Install PHP extensions
 ADD install-php.sh /usr/sbin/install-php.sh
 RUN /usr/sbin/install-php.sh
+RUN composer global require squizlabs/php_codesniffer && composer global require block8/php-docblock-checker && composer global require phpmd/phpmd
 
 # Install Xdebug extension
 RUN yes | pecl install xdebug \
@@ -39,3 +40,4 @@ RUN apt-get install -y wget libxss1 libappindicator1 libindicator7 && \
 RUN java -version && npm install selenium-standalone -g && selenium-standalone install
 
 WORKDIR /var/www
+EXPOSE 80
