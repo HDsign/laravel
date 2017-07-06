@@ -14,7 +14,7 @@ docker-php-ext-install \
     xmlrpc \
     opcache \
     soap \
-    xsl 
+    xsl \
     zip
 
 # Download trusted certs 
